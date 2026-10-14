@@ -2,7 +2,7 @@
 
 Mapa interativo de problemas urbanos e ambientais (alagamentos, lixo, buracos)
 no entorno da EREM Desembargador Renato Fonseca, em Olinda-PE, com uma rota
-sugerida segura até a escola (rota exemplar. Passo futuro: sistema de GPS que calcula automaticamente a melhor rota para qualquer lugar.).
+sugerida segura até a escola (rota e local exemplar. Passo futuro: sistema de GPS que calcula automaticamente a melhor rota para qualquer lugar.).
 
 
 ## Como usar
