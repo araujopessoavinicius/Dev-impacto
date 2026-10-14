@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Comunitário</title>
+  <link rel="stylesheet" href="leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+ 
+  <div class="filtros">
+  <button class="filtro ativo" data-categoria="alagamento">🌊 Alagamentos</button>
+  <button class="filtro ativo" data-categoria="lixo">🗑️ Lixo</button>
+  <button class="filtro ativo" data-categoria="buraco">🕳️ Buracos</button>
+</div>
+
+<div class="rotas">
+  <button id="btn-denunciar" class="btn-denunciar">+ Denunciar problema</button>
+  <span class="rotas__titulo">Rotas até a escola:</span>
+  <button class="botao-rota" data-rota="curta">⚠️ Rota mais curta</button>
+  <button class="botao-rota" data-rota="segura">✅ Rota segura</button>
+</div>
+
+  <div id="mapa"></div>
+
+  <h3>Exemplo de notícia: em produção, esta seção mostra as mais recentes</h3>
+
+  <div class="card">
+    <img src="assets/icons/lixo.jpeg">
+    <div>
+      <h5>Notícia</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
+      <button>Saiba mais</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="assets/icons/alagamento.jpg">
+    <div>
+      <h5>Notícia</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
+      <button>Saiba mais..</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="assets/icons/buraco.jpg">
+    <div>
+      <h5>Notícia</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
+      <button>Saiba mais..</button>
+    </div>
+  </div>
+
+  <h3>Sugestões para seguir (Exemplo)</h3>
+
+  <div class="containerdocarduser">
+    <div class="cardUser">
+      <img src="assets/icons/perfil.png">
+      <div>
+        <h4>Perfil</h4>
+        <p>Usuário</p>
+        <button>Seguir</button>
+      </div>
+    </div>
+
+    <div class="cardUser">
+      <img src="assets/icons/perfil.png">
+      <div>
+        <h4>Perfil</h4>
+        <p>Usuário</p>
+        <button>Seguir</button>
+      </div>
+    </div>
+
+    <div class="cardUser">
+      <img src="assets/icons/perfil.png">
+      <div>
+        <h4>Perfil</h4>
+        <p>Usuário</p>
+        <button>Seguir</button>
+      </div>
+    </div>
+  </div>
+  
+    
+  </div>
+
+
+  <footer>
+    <h3>Projeto Meio Ambiente</h3>
+    <p>© Todos os direitos reservados a equipe do projeto. Este site não tem nenhuma filiação com quaisquer órgãos públicos.</p>
+  </footer>
+
+  <div id="dica" class="dica oculto">📍 Clique no mapa, no local do problema</div>
+
+<div id="modal-reporte" class="modal oculto">
+  <form id="form-reporte" class="modal__conteudo">
+    <h2>Reportar problema</h2>
+
+    <label for="campo-categoria">Categoria</label>
+    <select id="campo-categoria">
+      <option value="alagamento">🌊 Alagamento / Esgoto</option>
+      <option value="lixo">🗑️ Lixo acumulado</option>
+      <option value="buraco">🕳️ Buraco / Via danificada</option>
+    </select>
+
+    <label for="campo-titulo">Título</label>
+    <input id="campo-titulo" type="text" maxlength="60" required>
+
+    <label for="campo-descricao">Descrição</label>
+    <textarea id="campo-descricao" rows="3" required></textarea>
+
+    <div class="modal__botoes">
+      <button type="button" id="btn-cancelar">Cancelar</button>
+      <button type="submit">Salvar</button>
+    </div>
+  </form>
+</div>
+
+  <script src="leaflet/leaflet.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
